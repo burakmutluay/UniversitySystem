@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="university@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="university">
+      <ObjectId>17093</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12975</ObjectId>
+    </database>
+    <database id="4" parent="1" name="dvdrental">
+      <ObjectId>16393</ObjectId>
+    </database>
+    <database id="5" parent="1" name="recommend">
+      <ObjectId>16720</ObjectId>
+    </database>
+    <database id="6" parent="1" name="OnlySchema">
+      <ObjectId>16724</ObjectId>
+    </database>
+    <database id="7" parent="1" name="Library">
+      <ObjectId>17048</ObjectId>
+    </database>
+    <schema id="8" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2019-04-23.17:48:37.183</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1136</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="information_schema">
+      <ObjectId>12685</ObjectId>
+    </schema>
+    <sequence id="14" parent="8" name="academic_academicid_seq">
+      <ObjectId>18118</ObjectId>
+      <StateNumber>1135</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="8" name="project_projectid_seq">
+      <ObjectId>18179</ObjectId>
+      <StateNumber>1135</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="8" name="sections_sectionid_seq">
+      <ObjectId>18133</ObjectId>
+      <StateNumber>1135</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="8" name="student_studentid_seq">
+      <ObjectId>18157</ObjectId>
+      <StateNumber>1135</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="18" parent="8" name="academic">
+      <ObjectId>18120</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="19" parent="8" name="course">
+      <ObjectId>18092</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="20" parent="8" name="course_of_dpt">
+      <ObjectId>18105</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="21" parent="8" name="department">
+      <ObjectId>18099</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="22" parent="8" name="enrollment">
+      <ObjectId>18197</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="23" parent="8" name="project">
+      <ObjectId>18181</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="24" parent="8" name="sections">
+      <ObjectId>18135</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <table id="25" parent="8" name="student">
+      <ObjectId>18159</ObjectId>
+      <StateNumber>1135</StateNumber>
+    </table>
+    <column id="26" parent="18" name="academicid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+      <SequenceName>academic_academicid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;academic_academicid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="27" parent="18" name="aname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="28" parent="18" name="email">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="29" parent="18" name="office">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="30" parent="18" name="apassword">
+      <Position>5</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="31" parent="18" name="dptname">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="32" parent="18" name="academic_pkey">
+      <ObjectId>18124</ObjectId>
+      <ColNames>academicid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="33" parent="18" name="academic_email_key">
+      <ObjectId>18126</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="18" name="academic_pkey">
+      <ObjectId>18125</ObjectId>
+      <ColNames>academicid</ColNames>
+      <UnderlyingIndexName>academic_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="35" parent="18" name="academic_email_key">
+      <ObjectId>18127</ObjectId>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>academic_email_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="36" parent="18" name="academic_dptname_fkey">
+      <ObjectId>18128</ObjectId>
+      <ColNames>dptname</ColNames>
+      <RefTableId>18099</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>department_pkey</RefKeyName>
+      <RefColNames>dptname</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="37" parent="19" name="cname">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="38" parent="19" name="description">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="39" parent="19" name="term">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="40" parent="19" name="credit">
+      <Position>4</Position>
+      <DataType>real|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="41" parent="19" name="course_pkey">
+      <ObjectId>18097</ObjectId>
+      <ColNames>cname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="19" name="course_pkey">
+      <ObjectId>18098</ObjectId>
+      <ColNames>cname</ColNames>
+      <UnderlyingIndexName>course_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="43" parent="19" name="course_term_check">
+      <ObjectId>18095</ObjectId>
+      <ColNames>term</ColNames>
+      <Predicate>(term &gt; 0) AND (term &lt; 3)</Predicate>
+    </check>
+    <check id="44" parent="19" name="course_credit_check">
+      <ObjectId>18096</ObjectId>
+      <ColNames>credit</ColNames>
+      <Predicate>(credit &gt; (0.0)::double precision) AND (credit &lt; (8.0)::double precision)</Predicate>
+    </check>
+    <column id="45" parent="20" name="dptname">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="46" parent="20" name="coursename">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <foreign-key id="47" parent="20" name="course_of_dpt_dptname_fkey">
+      <ObjectId>18108</ObjectId>
+      <ColNames>dptname</ColNames>
+      <RefTableId>18099</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>department_pkey</RefKeyName>
+      <RefColNames>dptname</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="20" name="course_of_dpt_coursename_fkey">
+      <ObjectId>18113</ObjectId>
+      <ColNames>coursename</ColNames>
+      <RefTableId>18092</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course</RefTableName>
+      <RefKeyName>course_pkey</RefKeyName>
+      <RefColNames>cname</RefColNames>
+    </foreign-key>
+    <column id="49" parent="21" name="dptname">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="50" parent="21" name="phonenumber">
+      <Position>2</Position>
+      <DataType>varchar(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="51" parent="21" name="address">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1135</StateNumber>
+      <DefaultExpression>&apos;OUR CAMPUS&apos;::character varying</DefaultExpression>
+    </column>
+    <index id="52" parent="21" name="department_pkey">
+      <ObjectId>18103</ObjectId>
+      <ColNames>dptname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="21" name="department_pkey">
+      <ObjectId>18104</ObjectId>
+      <ColNames>dptname</ColNames>
+      <UnderlyingIndexName>department_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="22" name="studentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="55" parent="22" name="sectionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="56" parent="22" name="grade">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="57" parent="22" name="pk_enrollment">
+      <ObjectId>18201</ObjectId>
+      <ColNames>studentid
+sectionid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="22" name="pk_enrollment">
+      <ObjectId>18202</ObjectId>
+      <ColNames>studentid
+sectionid</ColNames>
+      <UnderlyingIndexName>pk_enrollment</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="59" parent="22" name="enrollment_studentid_fkey">
+      <ObjectId>18203</ObjectId>
+      <ColNames>studentid</ColNames>
+      <RefTableId>18159</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>student</RefTableName>
+      <RefKeyName>student_pkey</RefKeyName>
+      <RefColNames>studentid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="60" parent="22" name="enrollment_sectionid_fkey">
+      <ObjectId>18208</ObjectId>
+      <ColNames>sectionid</ColNames>
+      <RefTableId>18135</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>sections</RefTableName>
+      <RefKeyName>sections_pkey</RefKeyName>
+      <RefColNames>sectionid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="61" parent="22" name="enrollment_grade_check">
+      <ObjectId>18200</ObjectId>
+      <ColNames>grade</ColNames>
+      <Predicate>(grade &gt;= 0) AND (grade &lt;= 100)</Predicate>
+    </check>
+    <column id="62" parent="23" name="projectid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+      <SequenceName>project_projectid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;project_projectid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="63" parent="23" name="projectname">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="64" parent="23" name="budget">
+      <Position>3</Position>
+      <DataType>numeric(9,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="65" parent="23" name="description">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="66" parent="23" name="academicid">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="67" parent="23" name="dptname">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="68" parent="23" name="project_pkey">
+      <ObjectId>18185</ObjectId>
+      <ColNames>projectid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="69" parent="23" name="project_pkey">
+      <ObjectId>18186</ObjectId>
+      <ColNames>projectid</ColNames>
+      <UnderlyingIndexName>project_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="70" parent="23" name="project_academicid_fkey">
+      <ObjectId>18187</ObjectId>
+      <ColNames>academicid</ColNames>
+      <RefTableId>18120</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>academic</RefTableName>
+      <RefKeyName>academic_pkey</RefKeyName>
+      <RefColNames>academicid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="71" parent="23" name="project_dptname_fkey">
+      <ObjectId>18192</ObjectId>
+      <ColNames>dptname</ColNames>
+      <RefTableId>18099</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>department_pkey</RefKeyName>
+      <RefColNames>dptname</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="72" parent="24" name="sectionid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+      <SequenceName>sections_sectionid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;sections_sectionid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="73" parent="24" name="sectionday">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="74" parent="24" name="startingtime">
+      <Position>3</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="75" parent="24" name="endingtime">
+      <Position>4</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="76" parent="24" name="couta">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1136</StateNumber>
+    </column>
+    <column id="77" parent="24" name="coursename">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="78" parent="24" name="dptname">
+      <Position>7</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="79" parent="24" name="teacher">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="80" parent="24" name="sections_pkey">
+      <ObjectId>18140</ObjectId>
+      <ColNames>sectionid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="24" name="sections_pkey">
+      <ObjectId>18141</ObjectId>
+      <ColNames>sectionid</ColNames>
+      <UnderlyingIndexName>sections_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="82" parent="24" name="sections_coursename_fkey">
+      <ObjectId>18142</ObjectId>
+      <ColNames>coursename</ColNames>
+      <RefTableId>18092</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course</RefTableName>
+      <RefKeyName>course_pkey</RefKeyName>
+      <RefColNames>cname</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="83" parent="24" name="sections_dptname_fkey">
+      <ObjectId>18147</ObjectId>
+      <ColNames>dptname</ColNames>
+      <RefTableId>18099</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>department_pkey</RefKeyName>
+      <RefColNames>dptname</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="84" parent="24" name="sections_teacher_fkey">
+      <ObjectId>18152</ObjectId>
+      <ColNames>teacher</ColNames>
+      <RefTableId>18120</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>academic</RefTableName>
+      <RefKeyName>academic_pkey</RefKeyName>
+      <RefColNames>academicid</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="85" parent="24" name="sections_sectionday_check">
+      <ObjectId>18139</ObjectId>
+      <ColNames>sectionday</ColNames>
+      <Predicate>(sectionday &gt; 0) AND (sectionday &lt; 8)</Predicate>
+    </check>
+    <column id="86" parent="25" name="studentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+      <SequenceName>student_studentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;student_studentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="87" parent="25" name="sname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="88" parent="25" name="gender">
+      <Position>3</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="89" parent="25" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="90" parent="25" name="gpa">
+      <Position>5</Position>
+      <DataType>real|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="91" parent="25" name="spassword">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="92" parent="25" name="academicid">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <column id="93" parent="25" name="dptname">
+      <Position>8</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1135</StateNumber>
+    </column>
+    <index id="94" parent="25" name="student_pkey">
+      <ObjectId>18165</ObjectId>
+      <ColNames>studentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="95" parent="25" name="student_email_key">
+      <ObjectId>18167</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="25" name="student_pkey">
+      <ObjectId>18166</ObjectId>
+      <ColNames>studentid</ColNames>
+      <UnderlyingIndexName>student_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="97" parent="25" name="student_email_key">
+      <ObjectId>18168</ObjectId>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>student_email_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="98" parent="25" name="student_academicid_fkey">
+      <ObjectId>18169</ObjectId>
+      <ColNames>academicid</ColNames>
+      <RefTableId>18120</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>academic</RefTableName>
+      <RefKeyName>academic_pkey</RefKeyName>
+      <RefColNames>academicid</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="99" parent="25" name="student_dptname_fkey">
+      <ObjectId>18174</ObjectId>
+      <ColNames>dptname</ColNames>
+      <RefTableId>18099</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>department_pkey</RefKeyName>
+      <RefColNames>dptname</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="100" parent="25" name="student_gender_check">
+      <ObjectId>18163</ObjectId>
+      <ColNames>gender</ColNames>
+      <Predicate>(gender = &apos;M&apos;::bpchar) OR (gender = &apos;F&apos;::bpchar)</Predicate>
+    </check>
+    <check id="101" parent="25" name="student_gpa_check">
+      <ObjectId>18164</ObjectId>
+      <ColNames>gpa</ColNames>
+      <Predicate>(gpa &gt;= (0)::double precision) AND (gpa &lt;= (4)::double precision)</Predicate>
+    </check>
+  </database-model>
+</dataSource>

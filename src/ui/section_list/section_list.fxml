@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="434.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.section_list.SectionListController">
+   <children>
+      <HBox prefHeight="433.0" prefWidth="1019.0">
+         <children>
+            <VBox>
+               <children>
+                  <JFXButton onAction="#loadAddSection" prefHeight="130.0" prefWidth="150.0" text="Add" />
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#loadEditSection" prefHeight="130.0" prefWidth="150.0" text="Edit" />
+                  <JFXButton layoutX="10.0" layoutY="126.0" onAction="#loadDeleteAction" prefHeight="130.0" prefWidth="150.0" text="Delete" />
+               </children>
+            </VBox>
+            <JFXTreeTableView fx:id="tableView" currentItemsCount="4" prefHeight="433.0" prefWidth="900.0">
+               <columns>
+                  <TreeTableColumn fx:id="idCol" minWidth="7.0" prefWidth="100.0" text="Section ID" />
+                  <TreeTableColumn fx:id="cNameCol" minWidth="7.0" prefWidth="118.0" text="Course Name" />
+                  <TreeTableColumn fx:id="deptCol" minWidth="7.0" prefWidth="106.0" text="Department" />
+                  <TreeTableColumn fx:id="instructorCol" minWidth="7.0" prefWidth="101.0" text="Instructor" />
+                  <TreeTableColumn fx:id="termCol" minWidth="7.0" prefWidth="75.0" text="Term" />
+                  <TreeTableColumn fx:id="dayCol" minWidth="7.0" prefWidth="100.0" text="Day" />
+                  <TreeTableColumn fx:id="startingCol" minWidth="7.0" prefWidth="126.0" text="Starting Hour" />
+                  <TreeTableColumn fx:id="endingCol" minWidth="7.0" prefWidth="133.0" text="Ending Hour" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
